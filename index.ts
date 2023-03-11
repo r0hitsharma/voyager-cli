@@ -2,6 +2,7 @@
 
 import { readFile } from 'fs/promises';
 import { Command } from 'commander';
+import { parse } from 'csv-parse/sync';
 
 const program = new Command();
 program.argument('<file>', 'file to preview');
@@ -21,7 +22,9 @@ if(!isSupported){
 
 try {
     (async function () {
-        await readFile(file);
+        const contents = await readFile(file);
+        const records = parse(contents);
+        console.log(`File contains ${records.length} records`);
     })();
 } catch (err){
     console.error(err?.message);

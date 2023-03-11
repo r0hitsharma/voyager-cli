@@ -23,26 +23,24 @@ if(!isSupported){
     process.exit(1);
 }
 
-try {
-    (async function () {
-        const contents = await readFile(file);
-        const records = parse(contents, {
-            columns: true
-        });
-        console.log(`File contains ${records.length} records`);
+try { 
+    const contents = await readFile(file);
+    const records = parse(contents, {
+        columns: true
+    });
+    console.log(`File contains ${records.length} records`);
 
-        const app = express();
+    const app = express();
 
-        app.use(express.static('public'));
+    app.use(express.static('public'));
 
-        app.get('/data', (req, res) => {
-            res.json(records);
-        });
+    app.get('/data', (req, res) => {
+        res.json(records);
+    });
 
-        app.listen(port, () => {
-            console.log(`Client listening at http://localhost:${port}`);
-        });
-    })();
+    app.listen(port, () => {
+        console.log(`Client listening at http://localhost:${port}`);
+    });
 } catch (err){
     console.error(err?.message);
 }

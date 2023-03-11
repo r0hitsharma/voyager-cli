@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "target": "ES2017",
+    "outDir": "bin"
+  },
+  "ts-node": {
+    "transpileOnly": true
+  }
+}

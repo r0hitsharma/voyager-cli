@@ -6,7 +6,6 @@
     "type": "git",
     "url": "https://github.com/r0hitsharma/preview-data.git"
   },
-  "private": true,
   "main": "index.ts",
   "type": "module",
   "scripts": {

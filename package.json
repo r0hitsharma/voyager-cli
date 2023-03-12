@@ -5,7 +5,8 @@
   "main": "bin/index.js",
   "type": "module",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "postbuild": "cp -r ./public ./bin/"
   },
   "bin": {
     "preview-data": "./bin/index.js"

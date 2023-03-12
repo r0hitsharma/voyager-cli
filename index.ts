@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 
-import { readFile } from 'fs/promises';
+import { readFile } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
+import { join, dirname } from 'node:path';
 import { Command } from 'commander';
 import { parse } from 'csv-parse/sync';
 import express from 'express';
@@ -32,7 +34,9 @@ try {
 
     const app = express();
 
-    app.use(express.static('public'));
+    const __filename = fileURLToPath(import.meta.url);
+    const __dirname = dirname(__filename);
+    app.use(express.static(join(__dirname, 'public')));
 
     app.get('/data', (req, res) => {
         res.json(records);

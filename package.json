@@ -2,9 +2,10 @@
   "name": "preview-data",
   "version": "1.0.0",
   "description": "",
-  "main": "bin/index.js",
+  "main": "index.ts",
   "type": "module",
   "scripts": {
+    "dev": "ts-node-esm index.ts",
     "build": "tsc",
     "postbuild": "cp -r ./public ./bin/"
   },

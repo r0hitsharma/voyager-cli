@@ -11,6 +11,7 @@
   "scripts": {
     "dev": "ts-node-esm index.ts",
     "client:build": "browserify public/main.js -o public/bundle.js --ignore font-awesome-sass-loader",
+    "prebuild": "npm run client:build",
     "build": "tsc",
     "postbuild": "cp -r ./public ./bin/"
   },

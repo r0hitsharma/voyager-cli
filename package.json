@@ -11,8 +11,7 @@
   "scripts": {
     "dev": "ts-node-esm index.ts",
     "build": "tsc",
-    "postbuild": "cp -r ./public ./bin/",
-    "prepublish": "npm run build"
+    "postbuild": "cp -r ./public ./bin/"
   },
   "bin": {
     "preview-data": "./bin/index.js"

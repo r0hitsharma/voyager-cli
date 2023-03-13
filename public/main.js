@@ -3,7 +3,7 @@ var libvoyager = require('datavoyager');
 var container = document.getElementById("root");
 var config = {
   showDataSourceSelector: false,
-  hideHeader: true,
+  hideHeader: false,
   hideFooter: true
 }
 

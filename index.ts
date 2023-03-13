@@ -2,7 +2,7 @@
 
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
-import { join, dirname } from 'node:path';
+import { join, dirname, basename } from 'node:path';
 import { Command } from 'commander';
 import { parse } from 'csv-parse/sync';
 import express from 'express';
@@ -39,7 +39,10 @@ try {
     app.use(express.static(join(__dirname, 'public')));
 
     app.get('/data', (req, res) => {
-        res.json(records);
+        res.json({
+            file: basename(file),
+            data: records,
+        });
     });
 
     app.listen(port, () => {

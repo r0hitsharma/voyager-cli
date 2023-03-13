@@ -10,6 +10,7 @@
   "type": "module",
   "scripts": {
     "dev": "ts-node-esm index.ts",
+    "client:build": "browserify public/main.js -o public/bundle.js --ignore font-awesome-sass-loader",
     "build": "tsc",
     "postbuild": "cp -r ./public ./bin/"
   },
@@ -21,6 +22,8 @@
   "license": "ISC",
   "devDependencies": {
     "@types/express": "^4.17.17",
+    "browserify": "^17.0.0",
+    "datavoyager": "^2.0.0-alpha.24",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.5"
   },

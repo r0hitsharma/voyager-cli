@@ -134,3 +134,6 @@ dist
 
 # bin for use as cli
 bin
+
+# built client bundle
+public/bundle.js 

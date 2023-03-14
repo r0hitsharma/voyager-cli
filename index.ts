@@ -7,11 +7,26 @@ import { Command } from 'commander';
 import { parse } from 'csv-parse/sync';
 import express from 'express';
 
+// hide experimental warnings
+const defaultEmit = process.emit
+process.emit = function (...args) {
+  if (args[1].name === 'ExperimentalWarning') {
+    return undefined
+  }
+
+  return defaultEmit.call(this, ...args)
+}
+
+const packageJson = (await import('./package.json', { assert: { type: 'json' }})).default;
+const { version, description } = packageJson;
+
 const PORT = 8080;
 
-const program = new Command();
-program.argument('<file>', 'file to preview');
-program.option('-p, --port', 'port for binding client', PORT.toString());
+const program = new Command()
+    .description(description)
+    .argument('<file>', 'file to preview')
+    .option('-p, --port', 'port for binding client', PORT.toString())
+    .version(version, '-v, --version');
 
 program.parse();
 const [ file ] = program.args;

@@ -1,7 +1,7 @@
 {
   "name": "@r0hitsharma/preview-data",
   "version": "0.0.1",
-  "description": "",
+  "description": "Launch [Voyager](https://github.com/vega/voyager) data exploration tool against a local data source.",
   "repository": {
     "type": "git",
     "url": "https://github.com/r0hitsharma/preview-data.git"

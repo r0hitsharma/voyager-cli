@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "esModuleInterop": true,
+    "resolveJsonModule": true,
     "module": "nodenext",
     "moduleResolution": "nodenext",
     "target": "ES2017",

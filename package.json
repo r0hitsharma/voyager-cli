@@ -1,6 +1,6 @@
 {
   "name": "@r0hitsharma/voyager-cli",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Launch voyager data exploration tool against a local data source.",
   "repository": {
     "type": "git",

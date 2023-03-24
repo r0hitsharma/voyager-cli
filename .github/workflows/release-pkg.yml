@@ -1,11 +1,11 @@
-name: Publish package to GitHub Packages
+name: Publish package to NPM
 
 on:
   release:
     types: [published]
 
 jobs:
-  publish-gpr:
+  publish-npm:
     runs-on: ubuntu-latest
     permissions:
       packages: write

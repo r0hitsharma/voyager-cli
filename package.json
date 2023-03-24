@@ -1,10 +1,10 @@
 {
-  "name": "@r0hitsharma/preview-data",
+  "name": "@r0hitsharma/voyager-cli",
   "version": "0.0.1",
   "description": "Launch [Voyager](https://github.com/vega/voyager) data exploration tool against a local data source.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/r0hitsharma/preview-data.git"
+    "url": "https://github.com/r0hitsharma/voyager-cli.git"
   },
   "main": "index.ts",
   "type": "module",
@@ -16,7 +16,7 @@
     "postbuild": "cp -r ./public ./bin/"
   },
   "bin": {
-    "preview-data": "./bin/index.js"
+    "voyager-cli": "./bin/index.js"
   },
   "keywords": [],
   "author": "",

@@ -1,4 +1,4 @@
-# preview-data
+# voyager-cli
 
 Launch [Voyager](https://github.com/vega/voyager) data exploration tool against a local data source.
 
@@ -7,14 +7,14 @@ Launch [Voyager](https://github.com/vega/voyager) data exploration tool against 
 This package is published on Gihub's package registry (https://npm.pkg.github.com). You can either [associate the scope with the registry](https://docs.npmjs.com/cli/v9/using-npm/scope#associating-a-scope-with-a-registry), or specify it in the `install` command:
 
 ```sh
-npm install --registry=https://npm.pkg.github.com -g @r0hitsharma/preview-data
+npm install --registry=https://npm.pkg.github.com -g @r0hitsharma/voyager-cli
 ```
 
 ## Usage
 
 ```
-➜  ~ preview-data --help                                                                    
-Usage: preview-data [options] <file>
+➜  ~ voyager-cli --help                                                                    
+Usage: voyager-cli [options] <file>
 
 Arguments:
   file        file to preview

@@ -43,7 +43,8 @@ if(!isSupported){
 try { 
     const contents = await readFile(file);
     const records = parse(contents, {
-        columns: true
+        columns: true,
+        relax_column_count: true,
     });
     console.log(`File contains ${records.length} records`);
 
